@@ -18,14 +18,14 @@ const Navbar = () => {
     return (
         <header className={`header-section style-4 ${headerFixed ? "header-fixed fadeInUp" : ""}`}>
             {/* {header top} */}
-            <div className={`header-top ${socialToggle ? "open": ""}`}>
+            {/* <div className={`header-top ${socialToggle ? "open": ""}`}>
                 <div className='container'>
                     <div className='header-top-area'>
                         <Link to='signup' className='lab-btn me-3'><span>Create Account</span></Link>
                         <Link to='/login'>Log in</Link>
                     </div>
                 </div>
-            </div>
+            </div> */}
             {/* {header button} */}
             <div className='header-bottom'>
                 <div className='container'>
@@ -48,9 +48,11 @@ const Navbar = () => {
                                     <li><Link to='/about'>About</Link></li>
                                     <li><Link to='/contact'>Contact</Link></li>
                                 </ul>
-                                <Link to="sign-up" className='lab-btn me-3 d-none d-md-block'>Create Account</Link>
-                                <Link to="login" className='d-none d-md-block'>Log In</Link>
+                               
                             </div>
+                            {/* sign in and login  */}
+                            <Link to="sign-up" className='lab-btn me-3 d-none d-md-block'>Create Account</Link>
+                                <Link to="login" className='d-none d-md-block'>Log In</Link>
                         </div>
                     </div>
                 </div>
