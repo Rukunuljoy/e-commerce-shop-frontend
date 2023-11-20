@@ -19,7 +19,7 @@ import '././assets/css/animate.css';
 import '././assets/css/style.min.css';
 import Home from './Home/Home';
 import Blog from './blog/Blog';
-import Shop from './Home/Shop';
+import Shop from './shop/Shop';
 
 const router = createBrowserRouter([
   {
