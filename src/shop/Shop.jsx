@@ -9,14 +9,16 @@ const showResults = "Showing 01- 12 of Results";
 const Shop = () => {
     const [GridList,setGridList] = useState(false);
     const [products, setProducts] = useState(Data)
+    console.log(products)
 
     // pagination 
     const [currentPage, setCurrentPage] = useState(1)
     const productsPerPage = 12 
 
     const indexOfLastProduct = currentPage * productsPerPage
-    const indexOfFirstProduct = indexOfLastProduct * productsPerPage
+    const indexOfFirstProduct = indexOfLastProduct - productsPerPage
     const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
+    console.log(currentProducts)
 
     // function to change the currentPage
     const paginate = (pageNumber) =>{
@@ -45,10 +47,13 @@ const Shop = () => {
                         </div>
                         {/* products card */}
                         <div>
-                            <ProductCards GridList={GridList} products={products}/>
+                            <ProductCards GridList={GridList} products={currentProducts}/>
                         </div>
                         <Pagination
-                        
+                        productsPerPage={productsPerPage}
+                        totalProducts={products.length}
+                        paginate={paginate}
+                        activePage={currentPage}
                         />
                     </article>
                 </div>
